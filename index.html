@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Button hover</title>
+    <title>CSS animations</title>
 </head>
 <body>
-    <button class="btn-transition">Transition !</button>
+    <!-- Button hover -->
+    <button class="btn-transition center">Transition !</button>
+
+    <!-- Button popup -->
+    <div class="backdrop"></div>
+
+    <div class="popup-modal">
+        <h1>Look at me!</h1>
+        <p>I'm a pop up dialog!</p>
+        <button id="close-modal" class="btn-popup">Close Modal</button>
+    </div>
+
+    <div class="button-container">
+        <button id="trigger-modal" class="btn-popup center">Open Modal</button>
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
