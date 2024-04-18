@@ -7,9 +7,18 @@ const toggleModal = () => {
     const modalDiv = document.querySelector('.popup-modal');
     const backDrop = document.querySelector('.backdrop');
 
-    modalDiv.classList.toggle('show');
-    backDrop.classList.toggle('show');
+    modalDiv.classList.add('show');
+    backDrop.classList.add('show');
+
+}
+
+const testR = () => {
+    const modalDiv = document.querySelector('.popup-modal');
+    const backDrop = document.querySelector('.backdrop');
+
+    backDrop.classList.remove('show');
+    modalDiv.classList.add('back');
 }
 
 openButton.addEventListener('click', toggleModal);
-closeButton.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', testR);

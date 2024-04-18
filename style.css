@@ -33,15 +33,15 @@
     transform: scale(1.2);
 }
 
+/*Imported CSS odin*/
 
 body {
     overflow: hidden;
 }
   
-
 .button-container {
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     background-color: #ffffff;
     opacity: 100%;
     display: flex;
@@ -73,6 +73,25 @@ body {
     text-align: center;
 }
 
+.popup-modal {
+    animation: slideOut 0.5s ease-in-out;
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 100%;
+    }
+    30% {
+        opacity: 50%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    to {
+        margin-top: -100px;
+    }
+}
+
 .popup-modal p {
     margin-bottom: 24px;
 }
@@ -88,6 +107,20 @@ body {
 .popup-modal.show {
     opacity: 100%;
     pointer-events: all;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        margin-top: -100px;
+        opacity: 0%;
+    }
+    30% {
+        opacity: 50%;
+    }
+    50% {
+        opacity: 100%;
+    }
 }
 
 .backdrop.show {
